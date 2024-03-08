@@ -14,15 +14,15 @@ import com.ioc.container.notifier.Notifier;
 public class ActivationClientService {
 	
 	private Notifier notifier;
+	
+	/*Injecting the dependency into the class constructor*/
+	public ActivationClientService(Notifier notifier) {
+		this.notifier = notifier;
+	}
 
 	public void ativar(Client client) {
 		client.activate();
 		notifier.notifier(client, "Sua conta está ativa!");
 	}
-	
-	/*Injecting dependency into the set method*/
-	@Autowired
-	public void setNotifier(Notifier notifier) {
-		this.notifier = notifier;
-	}
-	}
+
+}
