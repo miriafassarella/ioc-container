@@ -1,12 +1,9 @@
 package com.ioc.container.notifier;
 
-import org.springframework.stereotype.Component;
 
 import com.ioc.container.model.Client;
 
-
 @TypeNotifier(LevelUrgent.USUALLY)
-@Component
 public class NotifierEmail implements Notifier{
 
 	@Override
