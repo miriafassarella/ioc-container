@@ -1,13 +1,14 @@
 package com.ioc.container.notifier;
 
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import com.ioc.container.model.Client;
 
-/*Handling beans ambiguity with @Priamary*/
-@Primary
+
+@Qualifier("mail")
 @Component
 public class NotifierEmail implements Notifier{
 

@@ -1,8 +1,10 @@
 package com.ioc.container.notifier;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import com.ioc.container.model.Client;
 
+@Qualifier("sms")
 @Component
 public class NotifierSMS implements Notifier{
 
