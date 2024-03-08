@@ -1,14 +1,11 @@
 package com.ioc.container.notifier;
 
-
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import com.ioc.container.model.Client;
 
 
-@Qualifier("mail")
+@TypeNotifier(LevelUrgent.USUALLY)
 @Component
 public class NotifierEmail implements Notifier{
 
