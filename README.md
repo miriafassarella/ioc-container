@@ -38,3 +38,25 @@ public class ActivationClientService {
 	private Notifier notifier;
 	}
 ```
+---
+
+### Personnalisation des beans : 
+- Quand on veut personalisé un bean, on fait sa configuration dans une classe de configuration.
+-  À ce moment là, la classe ActivationClientService et NotifierEmail n'ont plus l'annotation @Component.
+```ruby
+@Configuration
+public class Config {
+	
+	@Bean
+	public ActivationClientService activationClientService() {
+		return new ActivationClientService();
+	}
+	
+	@Bean
+	public NotifierEmail notifierEmail() {
+		return new NotifierEmail();
+	}
+
+}
+```
+
